@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Song Search</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Song Search</h1>
+        
+        <div class="input-section">
+            <label for="searchType">Search By:</label>
+            <select id="searchType">
+                <option value="song_id">Song ID</option>
+                <option value="song_name">Song Name</option>
+            </select>
+            
+            <input type="text" id="searchQuery" placeholder="Enter Song ID or Song Name">
+        </div>
+        
+        <div class="button-section">
+            <button id="search-button" onclick="searchSongs()">Search</button>
+        </div>
+        
+		<div id="current-song">Now Playing: None</div>
+		<div id="player-section" class="player-section">
+			<button id="play">Play</button>
+			<button id="pause">Pause</button>
+			<button id="next">Next</button>
+			<button id="prev">Prev</button>
+		</div>
+
+        <div id="results" class="results"></div>
+    </div>
+
+	<script src="/static/node_modules/howler/dist/howler.js"></script>
+    <script src="/static/script.js"></script>
+</body>
+</html>
+
